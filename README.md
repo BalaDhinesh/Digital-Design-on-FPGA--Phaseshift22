@@ -21,4 +21,8 @@ __Virtual FPGA Lab Github repo:__ [Link](https://github.com/BalaDhinesh/Virtual-
 ## Labs Starting-Point Code:
 __Template code:__ [Click here](https://makerchip.com/sandbox/0zpfRhJYm/0wjhRzo)
 
+__LED starter:__ [Click here](https://makerchip.com/sandbox/01wfphWMp/0r0hD0m)
+
+__Seven segment display starter:__ [Click here](https://makerchip.com/sandbox/01wfphWMp/0qjh7PV)
+
 __Traffic light controller starter code:__ [Click here](https://makerchip.com/sandbox/01wfphWMp/0pghxNj)
