@@ -19,4 +19,5 @@ __Motivation:__
 
 ## Labs Starting-Point Code:
 __Template code:__ https://makerchip.com/sandbox/0zpfRhJYm/0wjhRzo
-__Traffic light controller starter code:__ 
+
+__Traffic light controller starter code:__ https://makerchip.com/sandbox/01wfphWMp/0pghxNj
