@@ -9,18 +9,16 @@
    wire  dp = 1;
  
    reg [2:0] state;
- 
-   parameter [2:0] NORTH=3'b000;
-   parameter [2:0] NORTH_Y=3'b001;
-   parameter [2:0] SOUTH=3'b010;
-   parameter [2:0] SOUTH_Y=3'b011;
-   parameter [2:0] EAST=3'b100;
-   parameter [2:0] EAST_Y=3'b101;
-   parameter [2:0] WEST=3'b110;
-   parameter [2:0] WEST_Y=3'b111;
-
    reg [2:0] count;
  
+   parameter [2:0] NORTH	=	3'b000;
+   parameter [2:0] NORTH_Y	=	3'b001;
+   parameter [2:0] SOUTH	=	3'b010;
+   parameter [2:0] SOUTH_Y	=	3'b011;
+   parameter [2:0] EAST		=	3'b100;
+   parameter [2:0] EAST_Y	=	3'b101;
+   parameter [2:0] WEST		=	3'b110;
+   parameter [2:0] WEST_Y	=	3'b111;
 
    always @(posedge clk, posedge reset)
      begin
@@ -39,8 +37,8 @@
                     begin
                        
                        // Enable first seven segment and set to Green 
-                       digit = 4'b0111;
-                       segment = 7'b0100001;
+                       digit <= 4'b0111;
+                       segment <= 7'b1110111;
                        
                         /* TODO: 1. Keep the green NORTH signal active for 8 seconds 
                                 2. Set state of signal to yellow NORTH after that 
@@ -53,8 +51,8 @@
                     begin
                        
                         // Enable first seven segment and set to Yellow
-                        digit = 4'b0111;
-                        segment = 7'b1000100;
+                        digit <= 4'b0111;
+                        segment <= 7'b1111110;
                        
                         /* TODO: 1. Keep the yellow NORTH signal active for 4 seconds 
                                 2. Set state of signal to green SOUTH after that 
