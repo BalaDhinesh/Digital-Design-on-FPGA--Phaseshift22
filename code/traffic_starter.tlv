@@ -4,8 +4,8 @@
 \SV
    m4_makerchip_module   
    wire [15:0] led;
-	reg [3:0] digit;
-   reg [6:0] sseg;
+   reg [3:0] digit;
+   reg [6:0] segment;
    wire  dp = 1;
  
    reg [2:0] state;
@@ -40,7 +40,7 @@
                        
                        // Enable first seven segment and set to Green 
                        digit = 4'b0111;
-                       sseg = 7'b0100001;
+                       segment = 7'b0100001;
                        
                         /* TODO: 1. Keep the green NORTH signal active for 8 seconds 
                                 2. Set state of signal to yellow NORTH after that 
@@ -54,7 +54,7 @@
                        
                         // Enable first seven segment and set to Yellow
                         digit = 4'b0111;
-                        sseg = 7'b1000100;
+                        segment = 7'b1000100;
                        
                         /* TODO: 1. Keep the yellow NORTH signal active for 4 seconds 
                                 2. Set state of signal to green SOUTH after that 
@@ -139,6 +139,6 @@
    m4_define(M4_BOARD, 3)
    m4+fpga_init()
    m4+fpga_led(*led)
-   m4+fpga_sseg(*digit, *sseg, *dp)
+   m4+fpga_sseg(*digit, *segment, *dp)
 \SV
    endmodule
