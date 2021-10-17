@@ -25,4 +25,4 @@ __LED starter:__ [Click here](https://makerchip.com/sandbox/01wfphWMp/0r0hD0m)
 
 __Seven segment display starter:__ [Click here](https://makerchip.com/sandbox/0v2fWhWqR/0Elh6Jx)
 
-__Traffic light controller starter code:__ [Click here](https://makerchip.com/sandbox/01wfphWMp/0pghxNj)
+__Traffic light controller starter code:__ [Click here](https://makerchip.com/sandbox/0v2fWhWqR/0JZhQm2)
