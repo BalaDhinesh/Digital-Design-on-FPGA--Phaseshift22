@@ -19,10 +19,10 @@ __Virtual FPGA Lab Github repo:__ [Link](https://github.com/BalaDhinesh/Virtual-
 - Integrate with LED and seven-segment
 
 ## Labs Starting-Point Code:
-__Template code:__ [Click here](https://makerchip.com/sandbox/0zpfRhJYm/0wjhRzo)
+__Template code:__ [Click here](https://www.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2FBalaDhinesh%2FDigital-Design-on-FPGA--Phaseshift22%2Fmain%2Fcode%2Ftemplate.tlv#)
 
-__LED starter:__ [Click here](https://makerchip.com/sandbox/0v2fWhWqR/0KOhrvN)
+__LED starter:__ [Click here](https://www.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2FBalaDhinesh%2FDigital-Design-on-FPGA--Phaseshift22%2Fmain%2Fcode%2Fled_starter.tlv#)
 
-__Seven segment display starter:__ [Click here](https://makerchip.com/sandbox/0v2fWhWqR/0Elh6Jx)
+__Seven segment display starter:__ [Click here](https://www.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2FBalaDhinesh%2FDigital-Design-on-FPGA--Phaseshift22%2Fmain%2Fcode%2Fseven_segment_starter.tlv#)
 
-__Traffic light controller starter code:__ [Click here](https://makerchip.com/sandbox/0v2fWhWqR/0JZhQm2)
+__Traffic light controller starter code:__ [Click here](https://www.makerchip.com/sandbox?code_url=https:%2F%2Fraw.githubusercontent.com%2FBalaDhinesh%2FDigital-Design-on-FPGA--Phaseshift22%2Fmain%2Fcode%2Ftraffic_starter.tlv#)

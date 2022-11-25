@@ -1,12 +1,14 @@
 \m4_TLV_version 1d -p verilog --bestsv --noline: tl-x.org
+
 \SV
-   m4_include_lib(['https://raw.githubusercontent.com/BalaDhinesh/Virtual-FPGA-Lab/main/tlv_lib/fpga_includes.tlv'])                   
+   m4_include_lib(['https://raw.githubusercontent.com/os-fpga/Virtual-FPGA-Lab/main/tlv_lib/fpga_includes.tlv'])    
+   
 \SV
-   m4_makerchip_module   
-   wire [15:0] led;
-   reg [3:0] digit;
-   reg [6:0] segment;
-   wire  dp = 1;
+  module top(input wire clk, input wire reset, input wire [31:0] cyc_cnt, output wire passed, output wire failed);    /* verilator lint_save */ /* verilator lint_off UNOPTFLAT */  bit [256:0] RW_rand_raw; bit [256+63:0] RW_rand_vect; pseudo_rand #(.WIDTH(257)) pseudo_rand (clk, reset, RW_rand_raw[256:0]); assign RW_rand_vect[256+63:0] = {RW_rand_raw[62:0], RW_rand_raw};  /* verilator lint_restore */  /* verilator lint_off WIDTH */ /* verilator lint_off UNOPTFLAT */  
+   logic [15:0] led; 
+   logic [6:0] sseg_segment_n; 
+   logic sseg_decimal_point_n; 
+   logic [7:0] sseg_digit_n;
  
    reg [2:0] state;
    reg [2:0] count;
@@ -37,8 +39,8 @@
                     begin
                        
                        // Enable first seven segment and set to Green 
-                       digit <= 4'b0111;
-                       segment <= 7'b1110111;
+                       sseg_digit_n <= 4'b0111;
+                       sseg_segment_n <= 7'b1110111;
                        
                         /* TODO: 1. Keep the green NORTH signal active for 8 seconds 
                                 2. Set state of signal to yellow NORTH after that 
@@ -51,8 +53,8 @@
                     begin
                        
                         // Enable first seven segment and set to Yellow
-                        digit <= 4'b0111;
-                        segment <= 7'b1111110;
+                        sseg_digit_n <= 4'b0111;
+                        sseg_segment_n <= 7'b1111110;
                        
                         /* TODO: 1. Keep the yellow NORTH signal active for 4 seconds 
                                 2. Set state of signal to green SOUTH after that 
@@ -128,15 +130,8 @@
 	assign led = count;
 
 \TLV
-   // M4_BOARD numbering
-   // 1 - Zedboard
-   // 2 - Artix-7
-   // 3 - Basys3
-   // 4 - Icebreaker
-   // 5 - Nexys
-   m4_define(M4_BOARD, 3)
-   m4+fpga_init()
-   m4+fpga_led(*led)
-   m4+fpga_sseg(*digit, *segment, *dp)
+   /board
+      m4+board(/board, /fpga, 3, *, ['top: 0, left: -1500, width: 7000, height: 7000'])   // 3rd arg selects the board.
+   
 \SV
    endmodule
