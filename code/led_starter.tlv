@@ -9,7 +9,7 @@
    end
                    
 \TLV
-   m4_define(M4_BOARD, 1)  
+   m4_define(M4_BOARD, 3)  
    m4+fpga_init()
    m4+fpga_led(*led)
 \SV
