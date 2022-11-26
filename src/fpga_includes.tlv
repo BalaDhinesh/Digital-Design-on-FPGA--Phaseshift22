@@ -275,7 +275,7 @@
                initEach() {
                   let led = new fabric.Rect({
                         top: 150,
-                        left: 218 - 27.5 * (this.getIndex() + 1),
+                        left: 190 - 2.7 * (this.getIndex() + 1),
                         width: 12, 
                         height: 12, 
                         fill: "red",
@@ -294,7 +294,7 @@
                initEach() {
                   let led = new fabric.Rect({
                         top: 92,
-                        left: 195 - 25 * (this.getIndex() + 1),
+                        left: 175 - 2.6 * (this.getIndex() + 1),
                         width: 6, 
                         height: 10, 
                         fill: "red",
@@ -317,7 +317,7 @@
                initEach() {
                   let led = new fabric.Rect({
                         top: 128,
-                        left: 185 - 21.2 * (this.getIndex() + 1),
+                        left: 168 - 2.4 * (this.getIndex() + 1),
                         width: 8, 
                         height: 8, 
                         fill: "red",
